@@ -1,0 +1,1 @@
+{"name":"mate-worker","private":true,"type":"module","scripts":{"check":"tsc --noEmit","start":"node src/worker.ts"},"devDependencies":{"@types/node":"^24.0.0","typescript":"~5.9.3"}}

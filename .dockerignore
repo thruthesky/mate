@@ -1,0 +1,6 @@
+.git
+.env
+.secrets
+.dart_tool
+node_modules
+reports

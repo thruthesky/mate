@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-10-01T03:18:18.285240+00:00",
+  "mode": "demo",
+  "checks": [
+    "unauthenticated access and cross-role tokens rejected",
+    "agent allowlist enforced",
+    "worker online",
+    "approval stored before execution",
+    "duplicate approval rejected",
+    "actual file diff and node test output persisted",
+    "non-root/read-only/capabilities/PID/CPU/memory limits",
+    "only workspace/session volumes; no Docker socket",
+    "finished task container stopped",
+    "new connection replays persistent events",
+    "cursor replay returns no duplicates",
+    "follow-up reuses environment and creates new run",
+    "rejection cancels without executing",
+    "concurrent turns on same task blocked",
+    "cancel terminates container promptly",
+    "cancel preserves changes already made",
+    "non-root/read-only/capabilities/PID/CPU/memory limits",
+    "only workspace/session volumes; no Docker socket",
+    "finished task container stopped",
+    "two running tasks and third queued",
+    "independent tasks have distinct workspaces"
+  ],
+  "task_ids": [
+    "226834a1e10372f96c062485bf608fd1",
+    "6d2a54c641731d5c8bf0cc17a52ad2da",
+    "6b04c43e6540a5681be6f3b6eadc3ff7",
+    "9ca29e08af04e4fcbcc4ad3f22e25436",
+    "3ac0880e9812d0b358746acdba5e97e4",
+    "22c676c2d3abf5f20b4a17006de2b116"
+  ]
+}

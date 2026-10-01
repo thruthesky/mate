@@ -1,1 +1,14 @@
 AGENTS.md
+.env
+.secrets/
+build/
+.dart_tool/
+.flutter-plugins-dependencies
+node_modules/
+worker/dist/
+reports/*.local.json
+.DS_Store
+.playwright-mcp/
+__pycache__/
+backups/
+logs/

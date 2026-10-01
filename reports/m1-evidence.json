@@ -1,0 +1,373 @@
+{
+  "captured_at": "2026-10-01T03:18:29.679667+00:00",
+  "workers": [
+    {
+      "id": "m1-primary",
+      "heartbeat_at": "2026-10-01 03:18:27.928",
+      "online": 1,
+      "info": {
+        "name": "M1 Mac · Docker ARM64",
+        "architecture": "aarch64",
+        "cpus": 10,
+        "memory_bytes": 8321970176,
+        "docker": "29.2.0",
+        "max_concurrent": 2,
+        "run_timeout_seconds": 900,
+        "task_cpu": "2",
+        "task_memory": "2g",
+        "codex_auth": true,
+        "active": 1
+      }
+    }
+  ],
+  "checks_passed": 41,
+  "tasks": [
+    {
+      "mode": "demo",
+      "task": {
+        "id": "226834a1e10372f96c062485bf608fd1",
+        "project_id": "00000000000000000000000000000001",
+        "title": "검증 · 승인 후 데모 실행",
+        "agent": "demo",
+        "status": "completed",
+        "session_id": null,
+        "created_at": "2026-10-01 03:17:56.838",
+        "updated_at": "2026-10-01 03:18:06.746"
+      },
+      "environment": {
+        "task_id": "226834a1e10372f96c062485bf608fd1",
+        "container_name": "mate-task-226834a1e10372f96c062485bf608fd1",
+        "workspace_volume": "mate-work-226834a1e10372f96c062485bf608fd1",
+        "session_volume": "mate-session-226834a1e10372f96c062485bf608fd1"
+      },
+      "runs": [
+        {
+          "id": "0d8b0a5113589a749d5f287ad46bc9b4",
+          "task_id": "226834a1e10372f96c062485bf608fd1",
+          "prompt": "데모 승인과 이벤트 보존 검증",
+          "status": "completed",
+          "cancel_requested": 0,
+          "result": "데모 작업 완료: 샘플 덧셈 오류를 수정하고 요청을 저장했습니다.",
+          "diff": "diff --git a/demo-progress.txt b/demo-progress.txt\nnew file mode 100644\nindex 0000000..e8bafff\n--- /dev/null\n+++ b/demo-progress.txt\n@@ -0,0 +1 @@\n+데모 승인과 이벤트 보존 검증\ndiff --git a/demo-result.txt b/demo-result.txt\nnew file mode 100644\nindex 0000000..e8bafff\n--- /dev/null\n+++ b/demo-result.txt\n@@ -0,0 +1 @@\n+데모 승인과 이벤트 보존 검증\ndiff --git a/sum.js b/sum.js\nindex 2f311cf..86bc41c 100644\n--- a/sum.js\n+++ b/sum.js\n@@ -1,2 +1 @@\n-// Test project deliberately contains a small bug for agent verification.\n-export function sum(a, b) { return a - b; }\n+export function sum(a, b) { return a + b; }\n",
+          "verification": "✔ sum adds two positive numbers (0.501917ms)\n✔ sum handles negative numbers (0.08325ms)\n✔ sum handles zero (0.081042ms)\nℹ tests 3\nℹ suites 0\nℹ pass 3\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 42.556875\n",
+          "usage_json": "[]",
+          "exit_code": 0,
+          "worker_id": "m1-primary",
+          "created_at": "2026-10-01 03:17:56.840",
+          "started_at": "2026-10-01 03:17:56.882",
+          "finished_at": "2026-10-01 03:18:00.930"
+        },
+        {
+          "id": "cd78c830fcd93774fb5e52babd838fa9",
+          "task_id": "226834a1e10372f96c062485bf608fd1",
+          "prompt": "같은 작업 후속 요청",
+          "status": "completed",
+          "cancel_requested": 0,
+          "result": "데모 작업 완료: 샘플 덧셈 오류를 수정하고 요청을 저장했습니다.",
+          "diff": "diff --git a/demo-progress.txt b/demo-progress.txt\nindex e8bafff..4b15e4b 100644\n--- a/demo-progress.txt\n+++ b/demo-progress.txt\n@@ -1 +1 @@\n-데모 승인과 이벤트 보존 검증\n+같은 작업 후속 요청\ndiff --git a/demo-result.txt b/demo-result.txt\nindex e8bafff..4b15e4b 100644\n--- a/demo-result.txt\n+++ b/demo-result.txt\n@@ -1 +1 @@\n-데모 승인과 이벤트 보존 검증\n+같은 작업 후속 요청\n",
+          "verification": "✔ sum adds two positive numbers (0.44075ms)\n✔ sum handles negative numbers (0.089125ms)\n✔ sum handles zero (0.081917ms)\nℹ tests 3\nℹ suites 0\nℹ pass 3\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 35.47275\n",
+          "usage_json": "[]",
+          "exit_code": 0,
+          "worker_id": "m1-primary",
+          "created_at": "2026-10-01 03:18:02.005",
+          "started_at": "2026-10-01 03:18:02.966",
+          "finished_at": "2026-10-01 03:18:06.746"
+        }
+      ]
+    },
+    {
+      "mode": "demo",
+      "task": {
+        "id": "6d2a54c641731d5c8bf0cc17a52ad2da",
+        "project_id": "00000000000000000000000000000001",
+        "title": "검증 · 승인 거절",
+        "agent": "demo",
+        "status": "cancelled",
+        "session_id": null,
+        "created_at": "2026-10-01 03:18:07.071",
+        "updated_at": "2026-10-01 03:18:07.085"
+      },
+      "environment": {
+        "task_id": "6d2a54c641731d5c8bf0cc17a52ad2da",
+        "container_name": "mate-task-6d2a54c641731d5c8bf0cc17a52ad2da",
+        "workspace_volume": "mate-work-6d2a54c641731d5c8bf0cc17a52ad2da",
+        "session_volume": "mate-session-6d2a54c641731d5c8bf0cc17a52ad2da"
+      },
+      "runs": [
+        {
+          "id": "35590ec830132c634e0286a251c09b2f",
+          "task_id": "6d2a54c641731d5c8bf0cc17a52ad2da",
+          "prompt": "never run",
+          "status": "cancelled",
+          "cancel_requested": 0,
+          "result": null,
+          "diff": null,
+          "verification": null,
+          "usage_json": null,
+          "exit_code": null,
+          "worker_id": null,
+          "created_at": "2026-10-01 03:18:07.074",
+          "started_at": null,
+          "finished_at": "2026-10-01 03:18:07.084"
+        }
+      ]
+    },
+    {
+      "mode": "demo",
+      "task": {
+        "id": "6b04c43e6540a5681be6f3b6eadc3ff7",
+        "project_id": "00000000000000000000000000000001",
+        "title": "검증 · 중단",
+        "agent": "demo",
+        "status": "cancelled",
+        "session_id": null,
+        "created_at": "2026-10-01 03:18:07.094",
+        "updated_at": "2026-10-01 03:18:10.902"
+      },
+      "environment": {
+        "task_id": "6b04c43e6540a5681be6f3b6eadc3ff7",
+        "container_name": "mate-task-6b04c43e6540a5681be6f3b6eadc3ff7",
+        "workspace_volume": "mate-work-6b04c43e6540a5681be6f3b6eadc3ff7",
+        "session_volume": "mate-session-6b04c43e6540a5681be6f3b6eadc3ff7"
+      },
+      "runs": [
+        {
+          "id": "26150f337dc884022377b39301cb3154",
+          "task_id": "6b04c43e6540a5681be6f3b6eadc3ff7",
+          "prompt": "[slow] cancellation",
+          "status": "cancelled",
+          "cancel_requested": 1,
+          "result": "사용자가 실행을 중단했습니다.",
+          "diff": "diff --git a/demo-progress.txt b/demo-progress.txt\nnew file mode 100644\nindex 0000000..1cbe260\n--- /dev/null\n+++ b/demo-progress.txt\n@@ -0,0 +1 @@\n+[slow] cancellation\n",
+          "verification": "",
+          "usage_json": "[]",
+          "exit_code": null,
+          "worker_id": "m1-primary",
+          "created_at": "2026-10-01 03:18:07.094",
+          "started_at": "2026-10-01 03:18:08.073",
+          "finished_at": "2026-10-01 03:18:10.902"
+        }
+      ]
+    },
+    {
+      "mode": "demo",
+      "task": {
+        "id": "9ca29e08af04e4fcbcc4ad3f22e25436",
+        "project_id": "00000000000000000000000000000001",
+        "title": "검증 · 동시 실행 1",
+        "agent": "demo",
+        "status": "cancelled",
+        "session_id": null,
+        "created_at": "2026-10-01 03:18:11.185",
+        "updated_at": "2026-10-01 03:18:17.304"
+      },
+      "environment": {
+        "task_id": "9ca29e08af04e4fcbcc4ad3f22e25436",
+        "container_name": "mate-task-9ca29e08af04e4fcbcc4ad3f22e25436",
+        "workspace_volume": "mate-work-9ca29e08af04e4fcbcc4ad3f22e25436",
+        "session_volume": "mate-session-9ca29e08af04e4fcbcc4ad3f22e25436"
+      },
+      "runs": [
+        {
+          "id": "e9feaf51e6c232ceb0a873f8d61de6b4",
+          "task_id": "9ca29e08af04e4fcbcc4ad3f22e25436",
+          "prompt": "[slow] concurrency 1",
+          "status": "cancelled",
+          "cancel_requested": 1,
+          "result": "사용자가 실행을 중단했습니다.",
+          "diff": "diff --git a/demo-progress.txt b/demo-progress.txt\nnew file mode 100644\nindex 0000000..8065926\n--- /dev/null\n+++ b/demo-progress.txt\n@@ -0,0 +1 @@\n+[slow] concurrency 1\n",
+          "verification": "",
+          "usage_json": "[]",
+          "exit_code": null,
+          "worker_id": "m1-primary",
+          "created_at": "2026-10-01 03:18:11.186",
+          "started_at": "2026-10-01 03:18:12.153",
+          "finished_at": "2026-10-01 03:18:17.304"
+        }
+      ]
+    },
+    {
+      "mode": "demo",
+      "task": {
+        "id": "3ac0880e9812d0b358746acdba5e97e4",
+        "project_id": "00000000000000000000000000000001",
+        "title": "검증 · 동시 실행 2",
+        "agent": "demo",
+        "status": "cancelled",
+        "session_id": null,
+        "created_at": "2026-10-01 03:18:11.185",
+        "updated_at": "2026-10-01 03:18:17.303"
+      },
+      "environment": {
+        "task_id": "3ac0880e9812d0b358746acdba5e97e4",
+        "container_name": "mate-task-3ac0880e9812d0b358746acdba5e97e4",
+        "workspace_volume": "mate-work-3ac0880e9812d0b358746acdba5e97e4",
+        "session_volume": "mate-session-3ac0880e9812d0b358746acdba5e97e4"
+      },
+      "runs": [
+        {
+          "id": "4e372544ba59eb907685c48629aa0737",
+          "task_id": "3ac0880e9812d0b358746acdba5e97e4",
+          "prompt": "[slow] concurrency 2",
+          "status": "cancelled",
+          "cancel_requested": 1,
+          "result": "사용자가 실행을 중단했습니다.",
+          "diff": "diff --git a/demo-progress.txt b/demo-progress.txt\nnew file mode 100644\nindex 0000000..9cade1d\n--- /dev/null\n+++ b/demo-progress.txt\n@@ -0,0 +1 @@\n+[slow] concurrency 2\n",
+          "verification": "",
+          "usage_json": "[]",
+          "exit_code": null,
+          "worker_id": "m1-primary",
+          "created_at": "2026-10-01 03:18:11.186",
+          "started_at": "2026-10-01 03:18:12.140",
+          "finished_at": "2026-10-01 03:18:17.303"
+        }
+      ]
+    },
+    {
+      "mode": "demo",
+      "task": {
+        "id": "22c676c2d3abf5f20b4a17006de2b116",
+        "project_id": "00000000000000000000000000000001",
+        "title": "검증 · 동시 실행 0",
+        "agent": "demo",
+        "status": "cancelled",
+        "session_id": null,
+        "created_at": "2026-10-01 03:18:11.188",
+        "updated_at": "2026-10-01 03:18:16.238"
+      },
+      "environment": {
+        "task_id": "22c676c2d3abf5f20b4a17006de2b116",
+        "container_name": "mate-task-22c676c2d3abf5f20b4a17006de2b116",
+        "workspace_volume": "mate-work-22c676c2d3abf5f20b4a17006de2b116",
+        "session_volume": "mate-session-22c676c2d3abf5f20b4a17006de2b116"
+      },
+      "runs": [
+        {
+          "id": "edf22344f05ee66134ab24ab5c5176d2",
+          "task_id": "22c676c2d3abf5f20b4a17006de2b116",
+          "prompt": "[slow] concurrency 0",
+          "status": "cancelled",
+          "cancel_requested": 1,
+          "result": null,
+          "diff": null,
+          "verification": null,
+          "usage_json": null,
+          "exit_code": null,
+          "worker_id": null,
+          "created_at": "2026-10-01 03:18:11.188",
+          "started_at": null,
+          "finished_at": "2026-10-01 03:18:16.237"
+        }
+      ]
+    },
+    {
+      "mode": "recovery",
+      "task": {
+        "id": "d4edaf4bdaaaa59413800985f01c8b93",
+        "project_id": "00000000000000000000000000000001",
+        "title": "검증 · 워커 강제 재시작 복구",
+        "agent": "demo",
+        "status": "completed",
+        "session_id": null,
+        "created_at": "2026-10-01 03:18:18.431",
+        "updated_at": "2026-10-01 03:18:28.647"
+      },
+      "environment": {
+        "task_id": "d4edaf4bdaaaa59413800985f01c8b93",
+        "container_name": "mate-task-d4edaf4bdaaaa59413800985f01c8b93",
+        "workspace_volume": "mate-work-d4edaf4bdaaaa59413800985f01c8b93",
+        "session_volume": "mate-session-d4edaf4bdaaaa59413800985f01c8b93"
+      },
+      "runs": [
+        {
+          "id": "6ce14190f5a101624591d6c9b7561ccc",
+          "task_id": "d4edaf4bdaaaa59413800985f01c8b93",
+          "prompt": "[slow] interrupted smoke",
+          "status": "interrupted",
+          "cancel_requested": 0,
+          "result": "실행 관리자 재시작을 감지했습니다. 기존 명령을 종료했으며 자동 재실행하지 않습니다. 후속 요청으로 저장된 코드·세션에서 이어갈 수 있습니다.",
+          "diff": "diff --git a/demo-progress.txt b/demo-progress.txt\nnew file mode 100644\nindex 0000000..4bc140f\n--- /dev/null\n+++ b/demo-progress.txt\n@@ -0,0 +1 @@\n+[slow] interrupted smoke\n",
+          "verification": "",
+          "usage_json": "[]",
+          "exit_code": null,
+          "worker_id": "m1-primary",
+          "created_at": "2026-10-01 03:18:18.431",
+          "started_at": "2026-10-01 03:18:19.262",
+          "finished_at": "2026-10-01 03:18:23.805"
+        },
+        {
+          "id": "7c31415fca96bd8f1d1fdee74b69d78d",
+          "task_id": "d4edaf4bdaaaa59413800985f01c8b93",
+          "prompt": "복구 후 저장된 작업으로 재개",
+          "status": "completed",
+          "cancel_requested": 0,
+          "result": "데모 작업 완료: 샘플 덧셈 오류를 수정하고 요청을 저장했습니다.",
+          "diff": "diff --git a/demo-progress.txt b/demo-progress.txt\nindex 4bc140f..9d4888d 100644\n--- a/demo-progress.txt\n+++ b/demo-progress.txt\n@@ -1 +1 @@\n-[slow] interrupted smoke\n+복구 후 저장된 작업으로 재개\ndiff --git a/demo-result.txt b/demo-result.txt\nnew file mode 100644\nindex 0000000..9d4888d\n--- /dev/null\n+++ b/demo-result.txt\n@@ -0,0 +1 @@\n+복구 후 저장된 작업으로 재개\ndiff --git a/sum.js b/sum.js\nindex 2f311cf..86bc41c 100644\n--- a/sum.js\n+++ b/sum.js\n@@ -1,2 +1 @@\n-// Test project deliberately contains a small bug for agent verification.\n-export function sum(a, b) { return a - b; }\n+export function sum(a, b) { return a + b; }\n",
+          "verification": "✔ sum adds two positive numbers (0.509375ms)\n✔ sum handles negative numbers (0.085084ms)\n✔ sum handles zero (0.081334ms)\nℹ tests 3\nℹ suites 0\nℹ pass 3\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 41.849167\n",
+          "usage_json": "[]",
+          "exit_code": 0,
+          "worker_id": "m1-primary",
+          "created_at": "2026-10-01 03:18:24.456",
+          "started_at": "2026-10-01 03:18:24.847",
+          "finished_at": "2026-10-01 03:18:28.647"
+        }
+      ]
+    },
+    {
+      "mode": "codex",
+      "task": {
+        "id": "60be24ff964051399e4d45f13c1670f1",
+        "project_id": "00000000000000000000000000000001",
+        "title": "검증 · 실제 Codex 덧셈 수정",
+        "agent": "codex",
+        "status": "completed",
+        "session_id": "01a0f571-c1b9-7ce0-b649-e6bbac760b2e",
+        "created_at": "2026-10-01 03:11:06.410",
+        "updated_at": "2026-10-01 03:11:53.990"
+      },
+      "environment": {
+        "task_id": "60be24ff964051399e4d45f13c1670f1",
+        "container_name": "mate-task-60be24ff964051399e4d45f13c1670f1",
+        "workspace_volume": "mate-work-60be24ff964051399e4d45f13c1670f1",
+        "session_volume": "mate-session-60be24ff964051399e4d45f13c1670f1"
+      },
+      "runs": [
+        {
+          "id": "d663fcdb7f9d294cc236256316c5a16e",
+          "task_id": "60be24ff964051399e4d45f13c1670f1",
+          "prompt": "sum.js의 sum(2,3)이 5가 되도록 버그를 수정하세요. 기존 테스트를 변경하거나 삭제하지 말고 node --test를 실행해 주세요.",
+          "status": "completed",
+          "cancel_requested": 0,
+          "result": "[sum.js](/workspace/sum.js:2)의 `a - b`를 `a + b`로 수정해 `sum(2, 3)`이 `5`를 반환하도록 했습니다.\n\n기존 테스트는 변경하거나 삭제하지 않았으며, `node --test` 실행 결과 3개 모두 통과했습니다. 인증 파일 접근이나 외부 서비스 쓰기·배포는 하지 않았습니다.",
+          "diff": "diff --git a/sum.js b/sum.js\nindex 2f311cf..3474035 100644\n--- a/sum.js\n+++ b/sum.js\n@@ -1,2 +1,2 @@\n // Test project deliberately contains a small bug for agent verification.\n-export function sum(a, b) { return a - b; }\n+export function sum(a, b) { return a + b; }\n",
+          "verification": "✔ sum adds two positive numbers (0.469125ms)\n✔ sum handles negative numbers (0.078542ms)\n✔ sum handles zero (0.075125ms)\nℹ tests 3\nℹ suites 0\nℹ pass 3\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 40.41975\n",
+          "usage_json": "{\"input_tokens\":58138,\"cached_input_tokens\":55040,\"cache_write_input_tokens\":0,\"output_tokens\":337,\"reasoning_output_tokens\":0}",
+          "exit_code": 0,
+          "worker_id": "m1-primary",
+          "created_at": "2026-10-01 03:11:06.411",
+          "started_at": "2026-10-01 03:11:07.452",
+          "finished_at": "2026-10-01 03:11:30.197"
+        },
+        {
+          "id": "f13b553de78ad13b7c5fa7399e136409",
+          "task_id": "60be24ff964051399e4d45f13c1670f1",
+          "prompt": "기존 sum 수정은 유지하세요. multiply.js에 export function multiply(a,b)를 추가하고 multiply.test.js에 3*4=12 및 -2*3=-6 테스트를 작성하고 node --test를 실행해 주세요.",
+          "status": "completed",
+          "cancel_requested": 0,
+          "result": "기존 `sum` 수정은 유지했습니다.\n\n- [multiply.js](/workspace/multiply.js)에 `multiply(a, b)` 추가\n- [multiply.test.js](/workspace/multiply.test.js)에 `3 * 4 = 12`, `-2 * 3 = -6` 테스트 추가\n- `node --test`: 총 5개 테스트 모두 통과\n\n인증 파일 접근이나 외부 서비스 쓰기·배포는 하지 않았습니다.",
+          "diff": "diff --git a/multiply.js b/multiply.js\nnew file mode 100644\nindex 0000000..fc97e18\n--- /dev/null\n+++ b/multiply.js\n@@ -0,0 +1 @@\n+export function multiply(a, b) { return a * b; }\ndiff --git a/multiply.test.js b/multiply.test.js\nnew file mode 100644\nindex 0000000..48a7128\n--- /dev/null\n+++ b/multiply.test.js\n@@ -0,0 +1,6 @@\n+import {test} from 'node:test';\n+import assert from 'node:assert/strict';\n+import {multiply} from './multiply.js';\n+\n+test('multiply multiplies two positive numbers', () => assert.equal(multiply(3, 4), 12));\n+test('multiply handles negative numbers', () => assert.equal(multiply(-2, 3), -6));\n",
+          "verification": "✔ multiply multiplies two positive numbers (0.441416ms)\n✔ multiply handles negative numbers (0.084959ms)\n✔ sum adds two positive numbers (0.48475ms)\n✔ sum handles negative numbers (0.079167ms)\n✔ sum handles zero (0.075625ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 71.234792\n",
+          "usage_json": "{\"input_tokens\":104161,\"cached_input_tokens\":99712,\"cache_write_input_tokens\":0,\"output_tokens\":754,\"reasoning_output_tokens\":0}",
+          "exit_code": 0,
+          "worker_id": "m1-primary",
+          "created_at": "2026-10-01 03:11:30.836",
+          "started_at": "2026-10-01 03:11:30.863",
+          "finished_at": "2026-10-01 03:11:53.989"
+        }
+      ]
+    }
+  ],
+  "services": "{\"Command\":\"\\\"docker-php-entrypoi…\\\"\",\"CreatedAt\":\"2026-10-01 12:08:30 +0900 KST\",\"ExitCode\":0,\"Health\":\"\",\"ID\":\"9c434ca48c2a\",\"Image\":\"mate-api\",\"Labels\":\"com.docker.compose.config-hash=0d9ce8de929adf57b0c0a16f81d051c5f4c4921725ca6925fb87d8c18a458e36,com.docker.compose.container-number=1,com.docker.compose.image=sha256:f2b8a74c4762ca36e3c695dfce12f810939804ed667c572a2aad0847aad466e7,com.docker.compose.oneoff=False,com.docker.compose.project=mate,com.docker.compose.project.config_files=/Users/thruthesky/apps/ai/mate/compose.yaml,com.docker.compose.project.working_dir=/Users/thruthesky/apps/ai/mate,com.docker.compose.version=5.0.2,com.docker.compose.depends_on=db:service_healthy:false,com.docker.compose.service=api,desktop.docker.io/ports.scheme=v2\",\"LocalVolumes\":\"0\",\"Mounts\":\"\",\"Name\":\"mate-api-1\",\"Names\":\"mate-api-1\",\"Networks\":\"mate_control\",\"Ports\":\"9000/tcp\",\"Project\":\"mate\",\"Publishers\":[{\"URL\":\"\",\"TargetPort\":9000,\"PublishedPort\":0,\"Protocol\":\"tcp\"}],\"RunningFor\":\"9 minutes ago\",\"Service\":\"api\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up 9 minutes\"}\n{\"Command\":\"\\\"docker-entrypoint.s…\\\"\",\"CreatedAt\":\"2026-10-01 12:08:30 +0900 KST\",\"ExitCode\":0,\"Health\":\"healthy\",\"ID\":\"d7ad48ee6a50\",\"Image\":\"mariadb:11.4\",\"Labels\":\"desktop.docker.io/ports.scheme=v2,org.opencontainers.image.licenses=GPL-2.0,org.opencontainers.image.url=https://github.com/MariaDB/mariadb-docker,com.docker.compose.depends_on=,com.docker.compose.project.config_files=/Users/thruthesky/apps/ai/mate/compose.yaml,com.docker.compose.service=db,com.docker.compose.version=5.0.2,org.opencontainers.image.authors=MariaDB Community,org.opencontainers.image.base.name=docker.io/library/ubuntu:noble,org.opencontainers.image.description=MariaDB Database for relational SQL,org.opencontainers.image.vendor=MariaDB Community,com.docker.compose.config-hash=5d9f35c0b896dfc31c631b4450b1266a41f88dcfcd23000639cf43503aa4c211,com.docker.compose.container-number=1,com.docker.compose.image=sha256:e619867ae3f991d58408e3e85a29d18475a12c0a95a55af70f31385eab71e7ef,com.docker.compose.project=mate,org.opencontainers.image.ref.name=ubuntu,org.opencontainers.image.title=MariaDB Database,org.opencontainers.image.version=11.4.10,com.docker.compose.project.working_dir=/Users/thruthesky/apps/ai/mate,desktop.docker.io/binds/1/Source=/Users/thruthesky/apps/ai/mate/api/schema.sql,desktop.docker.io/binds/1/SourceKind=hostFile,desktop.docker.io/binds/1/Target=/docker-entrypoint-initdb.d/001.sql,org.opencontainers.image.documentation=https://hub.docker.com/_/mariadb/,org.opencontainers.image.source=https://github.com/MariaDB/mariadb-docker,com.docker.compose.oneoff=False\",\"LocalVolumes\":\"1\",\"Mounts\":\"/host_mnt/User…,mate_mate-db\",\"Name\":\"mate-db-1\",\"Names\":\"mate-db-1\",\"Networks\":\"mate_control\",\"Ports\":\"3306/tcp\",\"Project\":\"mate\",\"Publishers\":[{\"URL\":\"\",\"TargetPort\":3306,\"PublishedPort\":0,\"Protocol\":\"tcp\"}],\"RunningFor\":\"9 minutes ago\",\"Service\":\"db\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up 9 minutes (healthy)\"}\n{\"Command\":\"\\\"/docker-entrypoint.…\\\"\",\"CreatedAt\":\"2026-10-01 12:09:32 +0900 KST\",\"ExitCode\":0,\"Health\":\"\",\"ID\":\"ff73d0817d51\",\"Image\":\"nginx:1.28-alpine\",\"Labels\":\"desktop.docker.io/ports.scheme=v2,com.docker.compose.container-number=1,com.docker.compose.depends_on=api:service_started:false,com.docker.compose.oneoff=False,com.docker.compose.project=mate,com.docker.compose.project.working_dir=/Users/thruthesky/apps/ai/mate,com.docker.compose.replace=web-1,desktop.docker.io/binds/0/Source=/Users/thruthesky/apps/ai/mate/build/web,desktop.docker.io/binds/0/Target=/usr/share/nginx/html,com.docker.compose.project.config_files=/Users/thruthesky/apps/ai/mate/compose.yaml,com.docker.compose.service=web,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/1/SourceKind=hostFile,desktop.docker.io/binds/1/Target=/etc/nginx/conf.d/default.conf,desktop.docker.io/ports/80/tcp=0.0.0.0:8787,maintainer=NGINX Docker Maintainers \\u003cdocker-maint@nginx.com\\u003e,com.docker.compose.config-hash=42bdf2dba3f96f2f6eda0bed47de2f4b498117c318faa363865a7ebc36e94ed2,com.docker.compose.image=sha256:feb29ad4d53f4c6d793d598ed2af77917b8587163de8df86d6ae8e2acec5a5d4,com.docker.compose.version=5.0.2,desktop.docker.io/binds/1/Source=/Users/thruthesky/apps/ai/mate/infra/nginx.conf\",\"LocalVolumes\":\"0\",\"Mounts\":\"/host_mnt/User…,/host_mnt/User…\",\"Name\":\"mate-web-1\",\"Names\":\"mate-web-1\",\"Networks\":\"mate_control,mate_edge\",\"Ports\":\"0.0.0.0:8787-\\u003e80/tcp\",\"Project\":\"mate\",\"Publishers\":[{\"URL\":\"0.0.0.0\",\"TargetPort\":80,\"PublishedPort\":8787,\"Protocol\":\"tcp\"}],\"RunningFor\":\"8 minutes ago\",\"Service\":\"web\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up 8 minutes\"}\n{\"Command\":\"\\\"docker-entrypoint.s…\\\"\",\"CreatedAt\":\"2026-10-01 12:17:55 +0900 KST\",\"ExitCode\":0,\"Health\":\"\",\"ID\":\"ba618dfc09f3\",\"Image\":\"mate-worker\",\"Labels\":\"desktop.docker.io/binds/0/SourceKind=dockerSocketProxied,desktop.docker.io/binds/1/Source=/Users/thruthesky/apps/ai/mate/.secrets,desktop.docker.io/binds/0/Target=/var/run/docker.sock,com.docker.compose.depends_on=web:service_started:false,com.docker.compose.image=sha256:fb63416a9c59fc44915defee9902d87c1954646b861130fa3c6272924e680292,com.docker.compose.replace=worker-1,com.docker.compose.container-number=1,com.docker.compose.project.working_dir=/Users/thruthesky/apps/ai/mate,desktop.docker.io/binds/0/Source=/var/run/docker.sock,desktop.docker.io/binds/1/Target=/run/mate-secrets,com.docker.compose.config-hash=d62d540e118049753398c38cd585e40b29c92e1145a3089bb5b13286e505173c,com.docker.compose.project=mate,com.docker.compose.project.config_files=/Users/thruthesky/apps/ai/mate/compose.yaml,com.docker.compose.service=worker,com.docker.compose.version=5.0.2,desktop.docker.io/binds/1/SourceKind=hostFile,desktop.docker.io/ports.scheme=v2,com.docker.compose.oneoff=False\",\"LocalVolumes\":\"0\",\"Mounts\":\"/host_mnt/User…,/run/host-serv…\",\"Name\":\"mate-worker-1\",\"Names\":\"mate-worker-1\",\"Networks\":\"mate_control\",\"Ports\":\"\",\"Project\":\"mate\",\"Publishers\":[],\"RunningFor\":\"34 seconds ago\",\"Service\":\"worker\",\"Size\":\"0B\",\"State\":\"running\",\"Status\":\"Up 6 seconds\"}\n",
+  "resources": "mate-worker-1 0.53% 58.66MiB / 384MiB\nmate-web-1 0.15% 9.188MiB / 128MiB\nmate-api-1 0.21% 11.89MiB / 256MiB\nmate-db-1 0.81% 162.3MiB / 768MiB\n",
+  "agent_image": "arm64 sha256:566de84959d332f66e03afab8c29aef88757641eee4c073983c5eec68211c56c"
+}

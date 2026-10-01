@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-01T03:18:29.555478+00:00",
+  "mode": "recovery",
+  "checks": [
+    "unauthenticated access and cross-role tokens rejected",
+    "agent allowlist enforced",
+    "worker online",
+    "worker restart marks interrupted without replay",
+    "interrupted code changes preserved as diff",
+    "non-root/read-only/capabilities/PID/CPU/memory limits",
+    "only workspace/session volumes; no Docker socket",
+    "finished task container stopped",
+    "explicit resume retains workspace/session"
+  ],
+  "task_ids": [
+    "d4edaf4bdaaaa59413800985f01c8b93"
+  ]
+}

@@ -1,0 +1,5 @@
+• I'm a read-only analyst. I need to read the workspace files: evidence file, docs, compose.yaml, worker code, api, scripts, reports. Then produce the markdown report in Korean.
+
+  Let me read the key files in parallel.Now read the worker source, agent, api, scripts, OPERATIONS, M1-TEST.Now read M1-TEST.md, api/index.php (maybe skim key parts), scripts (deploy-m1.sh, configure.py, install-autostart.py, start-macos.sh, smoke.py, collect-evidence.py), infra/nginx.conf, agent/Dockerfile, worker/Dockerfile, api/Dockerfile, lib/main.dart briefly.
+
+  Let me read in parallel.Now read api/index.php (probably long), smoke.py, install-autostart.py, agent/Dockerfile, worker/Dockerfile, infra/nginx.conf, api/Dockerfile, .env.example. Let me read in parallel.Now I have most of the picture. Let me check a couple more: .env.example, api/Dockerfile (maybe fpm config), worker/package.json, lib/main.dart briefly, scripts/smoke.py quickly,

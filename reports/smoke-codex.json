@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-10-01T03:11:54.249406+00:00",
+  "mode": "codex",
+  "checks": [
+    "unauthenticated access and cross-role tokens rejected",
+    "agent allowlist enforced",
+    "worker online",
+    "Codex waits for approval",
+    "real Codex session and token usage recorded",
+    "real Codex fixes code; actual tests pass",
+    "Codex resumes exact session and workspace",
+    "follow-up changes and real verification recorded",
+    "non-root/read-only/capabilities/PID/CPU/memory limits",
+    "only workspace/session volumes; no Docker socket",
+    "finished task container stopped"
+  ],
+  "task_ids": [
+    "60be24ff964051399e4d45f13c1670f1"
+  ]
+}
